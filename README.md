@@ -3,6 +3,7 @@ A simple keylogger written in C++ and Python.
 
 # Client
 The client is currently made for C++ using TCP for i/o and is undetected and perfect for basic usage (READ SECTION ABOUT TERMS)
+
 ![Detection](https://antiscan.me/images/result/tyoNj7cSBCmq.png)
 
 # Server
