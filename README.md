@@ -8,7 +8,7 @@ The client is currently made for C++ using TCP for i/o and is undetected and per
 
 # Server
 The server is a simple CnC (c2) server for management written in Python.
-It also writes the strokes to a file so you can manage the easily.
+It also writes the strokes to a file so you can manage them easily.
 
 ![Files](https://i.imgur.com/NN71D7U.png)
 
